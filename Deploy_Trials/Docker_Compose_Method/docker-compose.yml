@@ -1,0 +1,12 @@
+
+version: '2'
+services:
+  db:
+    image: postgres:9.5
+  web:
+    build: .
+    command: mix phx.server
+    volumes:
+      - .:/newsly_project
+    depends_on:
+      - db

@@ -1,0 +1,22 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "344677375614.dkr.ecr.us-west-2.amazonaws.com/newslypush",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "80",
+      "hostPort": "80"
+    }
+  ],
+  "volumes": [
+    {
+      "name": "newsly-app",
+      "host": {
+        "sourcePath": "/app"
+      }
+    }
+  ],
+  "Logging": "/var/log/nginx"
+}
